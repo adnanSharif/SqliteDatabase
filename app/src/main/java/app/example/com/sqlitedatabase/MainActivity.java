@@ -16,13 +16,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         super.onBackPressed();
-        moveTaskToBack(true);
+        moveTaskToBack(true); //If back pressed, minimize the app
     }
+
+    /**
+     * This method will be called if add contact button is tapped
+     * @param view
+     */
     public void addContact(View view){
         Intent intent = new Intent(MainActivity.this, AddContact.class);
         startActivity(intent);
     }
 
+    /**
+     * This method will be called be called if show contact button is tapped
+     * @param view
+     */
     public void showContact(View view){
         Intent intent = new Intent(MainActivity.this, ShowContact.class);
         startActivity(intent);
