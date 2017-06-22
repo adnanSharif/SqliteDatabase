@@ -13,12 +13,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        moveTaskToBack(true);
+    }
     public void addContact(View view){
         Intent intent = new Intent(MainActivity.this, AddContact.class);
         startActivity(intent);
     }
 
     public void showContact(View view){
+        Intent intent = new Intent(MainActivity.this, ShowContact.class);
+        startActivity(intent);
 
     }
 }
